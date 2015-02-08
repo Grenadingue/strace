@@ -1,0 +1,130 @@
+/*
+** t_syscall.h for strace in /home/chauvi_n/rendu/AUSP_strace/source/include
+**
+** Made by Nicolas Chauvin
+** Login   <chauvi_n@epitech.net>
+**
+** Started on  Sun May 18 17:33:25 2014 Nicolas Chauvin
+** Last update Sun May 18 20:38:57 2014 Nicolas Chauvin
+*/
+
+#ifndef		T_SYSCALL_H_
+# define	T_SYSCALL_H_
+
+typedef enum	e_typeid
+  {
+    VOID,
+    VA_ARG,
+    CHAR,
+    INT,
+    U_INT,
+    UINT32_T,
+    UINT64_T,
+    LONG,
+    U_LONG,
+    SIZE_T,
+    SSIZE_T,
+    PID_T,
+    OFF_T,
+    KEY_T,
+    MODE_T,
+    UID_T,
+    GID_T,
+    MQD_T,
+    CLOCK_T,
+    CLOCKID_T,
+    DEV_T,
+    OFF64_T,
+    SIGSET_T,
+    SOCKLEN_T,
+    TIME_T,
+    CAP_USER_HEADER_T,
+    CAP_USER_DATA_T,
+    AIO_CONTEXT_T,
+    U64,
+    TIMER_T,
+    KEY_SERIAL_T,
+    NFDS_T,
+    CADDR_T,
+    IDTYPE_T,
+    ID_T,
+    E_PTRACE_REQ,
+    S_FILE_HANDLE,
+    VOID_PTR,
+    VOID_2PTR,
+    CHAR_PTR,
+    CHAR_2PTR,
+    U_CHAR_PTR,
+    INT_PTR,
+    INT_PTR_2,
+    U_INT_PTR,
+    U_LONG_PTR,
+    SIZE_T_PTR,
+    OFF_T_PTR,
+    UID_T_PTR,
+    GID_T_PTR,
+    LOFF_T_PTR,
+    SIGSET_T_PTR,
+    FD_SET_PTR,
+    SOCKLEN_T_PTR,
+    SIGINFO_T_PTR,
+    STACK_T_PTR,
+    TIME_T_PTR,
+    TIMER_T_PTR,
+    CPU_SET_T_PTR,
+    AIO_CONTEXT_T_PTR,
+    S_STAT_PTR,
+    S_STATFS_PTR,
+    S_POLLFD_PTR,
+    S_SIGACTION_PTR,
+    S_IOVEC_PTR,
+    S_TIMEVAL_PTR,
+    S_TIMEVAL_PTR_2,
+    S_SHMID_DS_PTR,
+    S_TIMESPEC_PTR,
+    S_TIMESPEC_PTR_2,
+    S_ITIMERVAL_PTR,
+    S_SOCKADDR_PTR,
+    S_MSGHDR_PTR,
+    S_RUSAGE_PTR,
+    S_UTSNAME_PTR,
+    S_SEMBUF_PTR,
+    S_MSQID_DS_PTR,
+    S_LINUX_DIRENT_PTR,
+    S_TIMEZONE_PTR,
+    S_RLIMIT_PTR,
+    S_SYSINFO_PTR,
+    S_TMS_PTR,
+    S_UTIMBUF_PTR,
+    S_USTAT_PTR,
+    S_SCHED_PARAM_PTR,
+    S_SYSCTL_ARGS_PTR,
+    S_TIMEX_PTR,
+    S_KERNEL_SYM_PTR,
+    S_NFSCTL_ARG_PTR,
+    U_NFSCTL_RES_PTR,
+    S_STRBUF_PTR,
+    S_USER_DESC_PTR,
+    S_IO_EVENT_PTR,
+    S_IOCB_PTR,
+    S_IOCB_2PTR,
+    S_SIGEVENT_PTR,
+    S_ITIMERSPEC_PTR,
+    S_EPOLL_EVENT_PTR,
+    S_MQ_ATTR_PTR,
+    S_KEXEC_SEGMENT_PTR,
+    S_ROBUST_LIST_HEAD_PTR,
+    S_ROBUST_LIST_HEAD_2PTR,
+    S_PERF_EVENT_ATTR_PTR,
+    S_MMSGHDR_PTR,
+    S_GETCPU_CACHE_PTR,
+  }		t_typeid;
+
+typedef struct	s_syscall
+{
+  t_typeid	ret;
+  char		*name;
+  t_typeid	args[6];
+}		t_syscall;
+
+#endif		/* !T_SYSCALL_H_ */
