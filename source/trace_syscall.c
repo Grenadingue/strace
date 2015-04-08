@@ -5,7 +5,7 @@
 ** Email <chauvin.nico@gmail.com>
 **
 ** Started on  Thu May 15 20:52:03 2014 Nicolas Chauvin
-** Last update Wed Apr  8 20:25:35 2015 Nicolas Chauvin
+** Last update Wed Apr  8 23:05:11 2015 Nicolas Chauvin
 */
 
 #include <sys/types.h>
@@ -17,6 +17,7 @@
 #include <stdio.h>
 #include <strings.h>
 #include "t_syscall.h"
+#include "t_reg_value.h"
 #include "print_type.h"
 #include "p_error.h"
 
@@ -24,8 +25,7 @@ pid_t				g_pid;
 extern const t_syscall		g_syscall_x86_64[];
 extern const t_print_type	g_print_type[];
 
-void		print_syscall_ret(unsigned long int syscall, long ret,
-				  bool *ret_flag)
+void		print_syscall_ret(t_reg_value syscall, t_reg_value ret, bool *ret_flag)
 {
   *ret_flag = false;
   printf(" = ");
@@ -33,10 +33,9 @@ void		print_syscall_ret(unsigned long int syscall, long ret,
   printf("\n");
 }
 
-unsigned long int	print_syscall(struct user_regs_struct *regs,
-				      bool *ret_flag)
+t_reg_value		print_syscall(struct user_regs_struct *regs, bool *ret_flag)
 {
-  unsigned long int	*arg;
+  t_reg_value		*arg;
   int			i;
 
   i = 0;
@@ -45,8 +44,7 @@ unsigned long int	print_syscall(struct user_regs_struct *regs,
   printf("%s(", g_syscall_x86_64[regs->rax].name);
   while (g_syscall_x86_64[regs->rax].args[i] && i != 6)
     {
-      (*g_print_type[g_syscall_x86_64[regs->rax].args[i]])
-	(i ? true : false, *arg);
+      (*g_print_type[g_syscall_x86_64[regs->rax].args[i]])(i ? true : false, *arg);
       --arg;
       ++i;
     }
@@ -57,7 +55,7 @@ unsigned long int	print_syscall(struct user_regs_struct *regs,
 int				trace_syscall(pid_t pid)
 {
   struct user_regs_struct	regs;
-  unsigned long	int		syscall;
+  t_reg_value			syscall;
   u_short			ins;
   bool				ret_flag;
   int				status;

@@ -5,7 +5,7 @@
 ## Email <chauvin.nico@gmail.com>
 ##
 ## Started on  Wed Apr 30 18:43:54 2014 Nicolas Chauvin
-## Last update Wed Apr  8 20:30:02 2015 Nicolas Chauvin
+## Last update Wed Apr  8 22:10:09 2015 Nicolas Chauvin
 ##
 
 #
@@ -46,7 +46,7 @@ OBJS		=	$(SRCS:.c=.o)
 
 #
 ## compilation flags
-CFLAGS		+=	-W -Wall -Wextra #-Werror
+CFLAGS		+=	-W -Wall -Wextra -Werror
 CFLAGS		+=	-I $(INCLUDE)
 #CFLAGS		+=	-ggdb
 
