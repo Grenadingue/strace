@@ -2,7 +2,7 @@
 
 This README documents the what and the how of this repository
 
-Experimental, you SHOULD NOT use it if you're looking for the "real strace"
+/!\ This software is experimental, you SHOULD NOT use it if you're looking for the original strace /!\
 
 
 ### What is this repository for? ###
@@ -20,7 +20,7 @@ Experimental, you SHOULD NOT use it if you're looking for the "real strace"
 
 ### Specificity of this software ###
 
-* Experimental, you SHOULD NOT use it if you're looking for the "real strace"
+* Experimental, you SHOULD NOT use it if you're looking for the original strace
 * Designed for *x86_64* architecture ONLY
 * Originaly designed for *Opensuse 12* and *Debian 7*
 * Recently ported for working with *Archlinux*
