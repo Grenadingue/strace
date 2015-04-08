@@ -2,10 +2,10 @@
 ** usage.h for strace in /home/chauvi_n/rendu/SUA_2013_strace/source/include
 **
 ** Made by Nicolas Chauvin
-** Login   <chauvi_n@epitech.net>
+** Email <chauvin.nico@gmail.com>
 **
 ** Started on  Wed Apr 30 22:17:58 2014 Nicolas Chauvin
-** Last update Sun May 18 23:17:09 2014 Nicolas Chauvin
+** Last update Wed Apr  8 20:27:35 2015 Nicolas Chauvin
 */
 
 #ifndef		USAGE_H_

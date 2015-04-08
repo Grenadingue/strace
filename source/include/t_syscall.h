@@ -2,10 +2,10 @@
 ** t_syscall.h for strace in /home/chauvi_n/rendu/AUSP_strace/source/include
 **
 ** Made by Nicolas Chauvin
-** Login   <chauvi_n@epitech.net>
+** Email <chauvin.nico@gmail.com>
 **
 ** Started on  Sun May 18 17:33:25 2014 Nicolas Chauvin
-** Last update Sun May 18 20:38:57 2014 Nicolas Chauvin
+** Last update Wed Apr  8 20:27:14 2015 Nicolas Chauvin
 */
 
 #ifndef		T_SYSCALL_H_

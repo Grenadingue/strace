@@ -1,11 +1,11 @@
 ##
 ## Makefile for strace in /home/chauvi_n/rendu/SUA_2013_strace
-## 
+##
 ## Made by Nicolas Chauvin
-## Login   <chauvi_n@epitech.net>
-## 
+## Email <chauvin.nico@gmail.com>
+##
 ## Started on  Wed Apr 30 18:43:54 2014 Nicolas Chauvin
-## Last update Sun May 18 23:24:57 2014 Nicolas Chauvin
+## Last update Wed Apr  8 20:30:02 2015 Nicolas Chauvin
 ##
 
 #
@@ -46,9 +46,9 @@ OBJS		=	$(SRCS:.c=.o)
 
 #
 ## compilation flags
-CFLAGS	+=	-W -Wall -Wextra -Werror
-CFLAGS	+=	-I $(INCLUDE)
-# CFLAGS	+=	-ggdb
+CFLAGS		+=	-W -Wall -Wextra #-Werror
+CFLAGS		+=	-I $(INCLUDE)
+#CFLAGS		+=	-ggdb
 
 
 all:		$(NAME)

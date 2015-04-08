@@ -1,11 +1,11 @@
 /*
 ** trace_syscall.c for strace in /home/chauvi_n/rendu/AUSP_strace/source
-** 
+**
 ** Made by Nicolas Chauvin
-** Login   <chauvi_n@epitech.net>
-** 
+** Email <chauvin.nico@gmail.com>
+**
 ** Started on  Thu May 15 20:52:03 2014 Nicolas Chauvin
-** Last update Mon May 19 00:03:05 2014 Nicolas Chauvin
+** Last update Wed Apr  8 20:25:35 2015 Nicolas Chauvin
 */
 
 #include <sys/types.h>

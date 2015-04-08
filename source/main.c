@@ -1,11 +1,11 @@
 /*
 ** main.c for strace in /home/chauvi_n/rendu/SUA_2013_strace/source
-** 
+**
 ** Made by Nicolas Chauvin
-** Login   <chauvi_n@epitech.net>
-** 
+** Email <chauvin.nico@gmail.com>
+**
 ** Started on  Wed Apr 30 18:49:49 2014 Nicolas Chauvin
-** Last update Sun May 18 23:15:15 2014 Nicolas Chauvin
+** Last update Wed Apr  8 20:25:50 2015 Nicolas Chauvin
 */
 
 #include <strings.h>

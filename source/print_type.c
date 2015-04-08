@@ -1,11 +1,11 @@
 /*
 ** print_type.c for strace in /home/chauvi_n/rendu/AUSP_strace/source
-** 
+**
 ** Made by Nicolas Chauvin
-** Login   <chauvi_n@epitech.net>
-** 
+** Email <chauvin.nico@gmail.com>
+**
 ** Started on  Sun May 18 18:25:11 2014 Nicolas Chauvin
-** Last update Sun May 18 22:52:49 2014 Nicolas Chauvin
+** Last update Wed Apr  8 20:25:41 2015 Nicolas Chauvin
 */
 
 #include <stdbool.h>

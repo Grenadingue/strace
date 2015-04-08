@@ -1,11 +1,11 @@
 /*
 ** signal_handlers.c for strace in /home/chauvi_n/rendu/AUSP_strace/source
-** 
+**
 ** Made by Nicolas Chauvin
-** Login   <chauvi_n@epitech.net>
-** 
+** Email <chauvin.nico@gmail.com>
+**
 ** Started on  Sun May 18 23:21:46 2014 Nicolas Chauvin
-** Last update Sun May 18 23:31:32 2014 Nicolas Chauvin
+** Last update Wed Apr  8 20:26:05 2015 Nicolas Chauvin
 */
 
 #include <sys/types.h>

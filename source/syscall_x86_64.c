@@ -1,11 +1,11 @@
 /*
 ** syscall_x86_64.h for strace in /home/chauvi_n/TAF/tek2/System_Unix_Avance/strace/man_parser/output
-** 
+**
 ** Made by Nicolas Chauvin
-** Login   <chauvi_n@epitech.net>
-** 
+** Email <chauvin.nico@gmail.com>
+**
 ** Started on  Sat May 17 19:36:58 2014 Nicolas Chauvin
-** Last update Sun May 18 21:49:18 2014 Nicolas Chauvin
+** Last update Wed Apr  8 20:26:08 2015 Nicolas Chauvin
 */
 
 #include "t_syscall.h"

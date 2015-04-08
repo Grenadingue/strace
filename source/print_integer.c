@@ -1,11 +1,11 @@
 /*
 ** print_interger.c for strace in /home/chauvi_n/rendu/AUSP_strace/source
-** 
+**
 ** Made by Nicolas Chauvin
-** Login   <chauvi_n@epitech.net>
-** 
+** Email <chauvin.nico@gmail.com>
+**
 ** Started on  Sun May 18 19:23:06 2014 Nicolas Chauvin
-** Last update Sun May 18 21:08:30 2014 Nicolas Chauvin
+** Last update Wed Apr  8 20:25:44 2015 Nicolas Chauvin
 */
 
 #include <inttypes.h>

@@ -2,10 +2,10 @@
 ** print_type.h for strace in /home/chauvi_n/rendu/AUSP_strace/source/include
 **
 ** Made by Nicolas Chauvin
-** Login   <chauvi_n@epitech.net>
+** Email <chauvin.nico@gmail.com>
 **
 ** Started on  Sun May 18 19:42:07 2014 Nicolas Chauvin
-** Last update Sun May 18 20:59:26 2014 Nicolas Chauvin
+** Last update Wed Apr  8 20:27:20 2015 Nicolas Chauvin
 */
 
 #ifndef		PRINT_TYPE_H_
