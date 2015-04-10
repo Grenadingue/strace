@@ -2,7 +2,7 @@
 
 This README documents the what and the how of this repository
 
-/!\ This software is experimental, you SHOULD NOT use it if you're looking for the original strace /!\
+**/!\ ** This software is experimental, you SHOULD NOT use it if you're looking for the original strace **/!\ **
 
 
 ### What is this repository for? ###
@@ -13,10 +13,16 @@ This README documents the what and the how of this repository
 
 ### How do I get set up? ###
 
-* Clone this repository in your computer
-* Go into it
-* Then *'$ make'*
-* And *'$ ./strace -p <pid>'* or *'$ ./strace <any_cmd> [args]'*
+
+```
+#!bash
+
+$ cd
+$ git clone https://bitbucket.org/chauvi_n/strace.git OR $ git clone http://git.chauv.in/strace.git
+$ cd strace
+$ make
+$ ./strace -p <pid> OR $ ./strace <any_cmd> [args]
+```
 
 ### Specificity of this software ###
 
