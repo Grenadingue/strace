@@ -2,7 +2,7 @@
 
 This README documents the why, the what, and the how of this repository
 
-**/!\ ** This software is experimental, you SHOULD NOT use it if you're looking for the original strace **/!\ **
+/!\ This software is experimental, you SHOULD NOT use it if you're looking for the original strace /!\
 
 
 ### What is this repository for? ###
@@ -25,7 +25,7 @@ Some Unix-like systems provide other diagnostic tools similar to strace, such as
 #!bash
 
 $ cd
-$ git clone https://bitbucket.org/chauvi_n/strace.git || git clone http://git.chauv.in/strace.git
+$ https://github.com/NicolasChauvin/strace.git || git clone https://bitbucket.org/chauvi_n/strace.git || git clone http://git.chauv.in/strace.git
 $ cd strace
 $ make
 $ ./strace
