@@ -5,7 +5,7 @@
 ** Email <chauvin.nico@gmail.com>
 **
 ** Started on  Sun May 18 19:23:06 2014 Nicolas Chauvin
-** Last update Wed Apr  8 23:13:33 2015 Nicolas Chauvin
+** Last update Mon Apr 27 23:26:44 2015 Nicolas Chauvin
 */
 
 #include <stdbool.h>
@@ -16,7 +16,7 @@ void		print_void(bool comma_flag, t_reg_value value)
 {
   (void)comma_flag;
   (void)value;
-  printf("?");
+  printf("void");
 }
 
 void		print_va_arg(bool comma_flag, t_reg_value value)
