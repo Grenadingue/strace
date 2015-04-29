@@ -7,7 +7,7 @@ This README documents the why, the what, and the how of this repository
 
 ### What is this repository for? ###
 
-* An illustration of my C skills, attached to my [personal portfolio](http://nicolas.chauv.in/portfolio.phtml) *(online soon, April 2015)*
+* An illustration of my C skills, attached to my [personal portfolio](http://nicolas.chauv.in/portfolio.phtml) *(online soon)*
 * Was a school project
 
 ### What is "strace"? ###
@@ -22,26 +22,23 @@ Some Unix-like systems provide other diagnostic tools similar to strace, such as
 
 
 ```
-#!bash
-
 $ cd
-$ https://github.com/NicolasChauvin/strace.git || git clone https://bitbucket.org/chauvi_n/strace.git || git clone http://git.chauv.in/strace.git
+$ git clone https://github.com/NicolasChauvin/strace.git || git clone https://bitbucket.org/chauvi_n/strace.git || git clone http://git.chauv.in/strace.git
 $ cd strace
 $ make
 $ ./strace
 
 Usage : ./strace <command> [args] || <-p> <pid>
-
 ```
 
 ### Specificity of this software ###
 
 * Experimental, you SHOULD NOT use it if you're looking for the original strace
-* Designed for *x86_64* architecture only
-* Originaly designed for *Opensuse 12* and *Debian 7*
-* Recently ported for working with *Archlinux*
-* Pretty (very) slow, uses *PTRACE_SINGLESTEP* instead of *PTRACE_SYSCALL* (scholar restriction)
-* Print natives data types (*char*, *char* ***, *int*, ...)
+* Designed for x86_64 architecture only
+* Originaly designed for Opensuse 12 and Debian 7
+* Recently ported for working with Archlinux
+* Pretty (very) slow, uses ```PTRACE_SINGLESTEP``` instead of ```PTRACE_SYSCALL``` (scholar restriction)
+* Print natives data types (```char```, ```char **```, ```int```, ...)
 * Print hexadecimal values for pointers and any custom data type
 
 ### Who do I talk to? ###
