@@ -5,13 +5,13 @@
 ** Email <chauvin.nico@gmail.com>
 **
 ** Started on  Sun May 18 17:33:25 2014 Nicolas Chauvin
-** Last update Wed Apr  8 20:27:14 2015 Nicolas Chauvin
+** Last update Mon Apr 27 22:52:01 2015 Nicolas Chauvin
 */
 
 #ifndef		T_SYSCALL_H_
 # define	T_SYSCALL_H_
 
-typedef enum	e_typeid
+typedef enum	e_type
   {
     VOID,
     VA_ARG,
@@ -118,13 +118,13 @@ typedef enum	e_typeid
     S_PERF_EVENT_ATTR_PTR,
     S_MMSGHDR_PTR,
     S_GETCPU_CACHE_PTR,
-  }		t_typeid;
+  }		t_type;
 
 typedef struct	s_syscall
 {
-  t_typeid	ret;
-  char		*name;
-  t_typeid	args[6];
+  t_type	ret;
+  const char	*name;
+  t_type	args[6];
 }		t_syscall;
 
 #endif		/* !T_SYSCALL_H_ */
