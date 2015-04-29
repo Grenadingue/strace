@@ -5,7 +5,7 @@
 ** Email <chauvin.nico@gmail.com>
 **
 ** Started on  Thu May 15 20:52:03 2014 Nicolas Chauvin
-** Last update Wed Apr  8 23:05:11 2015 Nicolas Chauvin
+** Last update Mon Apr 27 23:20:51 2015 Nicolas Chauvin
 */
 
 #include <sys/types.h>
@@ -33,10 +33,10 @@ void		print_syscall_ret(t_reg_value syscall, t_reg_value ret, bool *ret_flag)
   printf("\n");
 }
 
-t_reg_value		print_syscall(struct user_regs_struct *regs, bool *ret_flag)
+void		print_syscall(struct user_regs_struct *regs, bool *ret_flag)
 {
-  t_reg_value		*arg;
-  int			i;
+  t_reg_value	*arg;
+  int		i;
 
   i = 0;
   *ret_flag = true;
@@ -49,14 +49,13 @@ t_reg_value		print_syscall(struct user_regs_struct *regs, bool *ret_flag)
       ++i;
     }
   printf(")");
-  return (regs->rax);
 }
 
 int				trace_syscall(pid_t pid)
 {
   struct user_regs_struct	regs;
   t_reg_value			syscall;
-  u_short			ins;
+  ushort			ins;
   bool				ret_flag;
   int				status;
 
@@ -75,7 +74,10 @@ int				trace_syscall(pid_t pid)
 	print_syscall_ret(syscall, regs.rax, &ret_flag);
       ins = ptrace(PTRACE_PEEKTEXT, pid, regs.rip, NULL);
       if (ins == 0x80CD || ins == 0x050F || ins == 0x340F)
-	syscall = print_syscall(&regs, &ret_flag);
+	{
+	  print_syscall(&regs, &ret_flag);
+	  syscall = regs.rax;
+	}
     }
   ptrace(PTRACE_DETACH, pid, NULL, NULL);
   return (0);
