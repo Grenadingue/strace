@@ -5,18 +5,19 @@
 ** Email <chauvin.nico@gmail.com>
 **
 ** Started on  Wed Apr 30 22:14:34 2014 Nicolas Chauvin
-** Last update Wed Apr  8 20:25:28 2015 Nicolas Chauvin
+** Last update Wed Apr 29 22:30:39 2015 Nicolas Chauvin
 */
 
 #include <stdbool.h>
 #include <stdlib.h>
 #include <string.h>
-#include <strings.h>
 #include <stdio.h>
+#include "limits2.h"
 #include "usage.h"
 
 static bool	usage_cmd(char **command, t_usg *usage)
 {
+  // Tricky, memcpy() is used because t_usg::command is const
   memcpy(&(usage->command), &command, sizeof(char **));
   return (true);
 }
@@ -24,27 +25,21 @@ static bool	usage_cmd(char **command, t_usg *usage)
 static bool	usage_pid(const char *pid_str, t_usg *usage)
 {
   int		i;
-  bool		ret;
-  char		buf[32];
 
   i = 0;
-  ret = true;
-  bzero(buf, sizeof(buf));
   usage->attach = true;
-  usage->pid = atoi(pid_str);
-  while (pid_str[i])
+  while (pid_str[i] && usage->attach && i != INT_MAX_STRLEN)
     {
-      ret = (pid_str[i] < '0' || pid_str[i] > '9' ? false : ret);
+      if (pid_str[i] < '0' || pid_str[i] > '9')
+	usage->attach = false;
       ++i;
     }
-  if (ret)
-    {
-      snprintf(buf, sizeof(buf), "%d", usage->pid);
-      ret = (buf[0] == '-' || !i ? false : ret);
-    }
-  if (!ret)
+  usage->pid = atoi(pid_str);
+  if (usage->attach && (!i || usage->pid == -1))
+    usage->attach = false;
+  if (!usage->attach)
     fprintf(stderr, BAD_PID);
-  return (ret);
+  return (usage->attach);
 }
 
 bool		usage(int ac, char **av, t_usg *usage)

@@ -5,7 +5,7 @@
 ** Email <chauvin.nico@gmail.com>
 **
 ** Started on  Wed Apr 30 22:17:58 2014 Nicolas Chauvin
-** Last update Wed Apr  8 20:27:35 2015 Nicolas Chauvin
+** Last update Tue Apr 28 00:24:43 2015 Nicolas Chauvin
 */
 
 #ifndef		USAGE_H_
@@ -16,7 +16,7 @@
 
 # define ARG_PID	"-p"
 # define BAD_USAGE	"\nUsage :\t%s <command> [args] || <-p> <pid>\n\n"
-# define BAD_PID	"Bad pid\n"
+# define BAD_PID	"Error :\tBad pid\n"
 
 typedef struct	s_usg
 {
