@@ -38,7 +38,7 @@ Usage : ./strace <command> [args] || <-p> <pid>
 * Originaly designed for Opensuse 12 and Debian 7
 * Recently ported for working with Archlinux
 * Pretty (very) slow, uses ```PTRACE_SINGLESTEP``` instead of ```PTRACE_SYSCALL``` (scholar restriction)
-* Print natives data types (```char```, ```char **```, ```int```, ...)
+* Print natives data types (```char```, ```char *```, ```int```, ...)
 * Print hexadecimal values for pointers and any custom data type
 
 ### Who do I talk to? ###
