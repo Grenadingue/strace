@@ -7,7 +7,7 @@ This README documents the why, the what, and the how of this repository
 
 ### What is this repository for? ###
 
-* An illustration of my C skills, attached to my [personal portfolio](http://nicolas.chauv.in/portfolio.phtml) *(online soon)*
+* An illustration of my C skills
 * Was a school project
 
 ### What is "strace"? ###
@@ -23,7 +23,7 @@ Some Unix-like systems provide other diagnostic tools similar to strace, such as
 
 ```
 $ cd
-$ git clone https://github.com/NicolasChauvin/strace.git || git clone https://bitbucket.org/chauvi_n/strace.git || git clone http://git.chauv.in/strace.git
+$ git clone https://github.com/grenadingue/strace.git || git clone http://git.chauv.in/strace.git
 $ cd strace
 $ make
 $ ./strace
